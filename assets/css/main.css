@@ -3050,7 +3050,7 @@ section,
 }
 
 .contact .contact-form .btn:hover {
-  background-color: color-mix(in srgb, var(--accent-color), var(--contrast-color) 20%);
+  background-color: black;
 }
 
 /*--------------------------------------------------------------
