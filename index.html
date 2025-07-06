@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - eBusiness Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: eBusiness
+  * Template URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
+  * Updated: Jun 23 2025 with Bootstrap v5.3.6
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    .dropzone {
+      border: 2px dashed #ccc;
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+      color: #999;
+      position: relative;
+      background-color: #f9f9f9;
+      transition: border 0.3s ease;
+    }
+
+    /* Asegurar que la imagen se ajuste al área sin cambiar el tamaño de la dropzone */
+    .dropzone img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      /* Hace que la imagen se ajuste sin perder su proporción */
+    }
+
+    .dropzone.dragover {
+      border-color: #007bff;
+      background-color: #eef6ff;
+      color: #007bff;
+    }
+
+    .dropzone img {
+      max-width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .image-preview-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .remove-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(255, 0, 0, 0.7);
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .remove-btn:hover {
+      background-color: rgba(255, 0, 0, 0.9);
+    }
+
+    .delete-button-container {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .btnb {
+      background-color: rgba(0, 0, 0, 0.08);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 80px;
+      min-width: 108px;
+      padding: 12px 8px;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #6c757d;
+    }
+
+    .input-group-text {
+      font-size: 1.2rem;
+    }
+
+    .form-control {
+      font-size: 1.1rem;
+    }
+
+    .btn-custom {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+    }
+
+    .btn-custom:hover {
+      background-color: #0056b3;
+    }
+
+    .form-section {
+      margin-bottom: 40px;
+    }
+
+    .box-icon {
+      font-size: 1.3rem;
+      color: #007bff;
+    }
+
+    .progress-bar-custom {
+      height: 8px;
+    }
+
+    /* Fondo negro con transparencia para la sección principal */
+    .pago {
+      background-color: rgba(0, 0, 0, 0.9);
+      /* Negro con opacidad */
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    /* Fondo blanco con transparencia para las secciones internas */
+    .form-section {
+      background-color: rgba(255, 255, 255, 0.8);
+      /* Blanco con opacidad */
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Títulos de las secciones */
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Subtítulos de las secciones */
+    .section-subtitle {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #6c757d;
+    }
+
+    /* Estilo para el botón Finalizar Compra */
+    .btn-custom {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+    }
+
+    .btn-custom:hover {
+      background-color: #0056b3;
+    }
+
+    /* Ajustes de los iconos de Boxicons */
+    .box-icon {
+      font-size: 1.3rem;
+      color: #007bff;
+    }
+
+    /* Input style */
+    .form-control {
+      font-size: 1.1rem;
+    }
+
+    /* Ajuste de los botones en el acumulador */
+    .btn-group button {
+      font-size: 1.2rem;
+      padding: 10px 20px;
+    }
+
+    .progress-bar-custom {
+      height: 8px;
+    }
+
+    /* pestaña flotante */
+
+    .price-sidebar {
+      position: fixed;
+      right: 0;
+      top: 25%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      padding: 20px;
+      border-radius: 10px 0 0 10px;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .price-sidebar h4 {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .price-sidebar p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    .price-sidebar button {
+      background-color: #fff;
+      color: #007bff;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .price-sidebar button:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto " style="position: relative; top: 25px;">
+        <div class="">
+          <!-- Logo -->
+          <img src="assets/img/logo.png" alt="Logo de la Empresa"
+            style="width: 10em; height: 110px; max-width: 100%; max-height: 180px; ">
+        </div>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <!-- Enlace para Verificador de Tickets -->
+          <li><a href="#verificador" class="active">Verificador de Tickets</a></li>
+
+          <!-- Enlace para Sobre Nosotros -->
+          <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        </ul>
+        <!-- Botón de navegación móvil -->
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section" style="padding-bottom: 0px; padding-top: 0px;">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center">
+          <div class="col-lg-6 p-5">
+            <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+              <h2>¡Haz Realidad Tu Sueño! Rifa de un Auto con 120 Bs!</h2>
+            </div>
+            <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+              <img src="assets/img/rifa.png" alt="Consulting Services" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+              <p class="text-justify">¡No dejes pasar esta oportunidad única de ganar un auto nuevo! Participa en
+                nuestra increíble rifa con
+                un costo de solo 120 Bs por ticket. El gran premio es un elegante auto que podría ser tuyo. Además,
+                tenemos más premios sorpresa para los participantes. ¡Aprovecha y compra tu ticket antes de que se
+                agoten! La rifa se realizará el 17 de agosto de 2025. No pierdas la oportunidad de llevarte un premio
+                espectacular. ¡Conviértete en el próximo afortunado ganador!</p>
+              <div class="hero-stats p-5">
+                <div class="stat-item">
+                  <h3><span data-purecounter-start="0" data-purecounter-end="5789" data-purecounter-duration="1"
+                      class="purecounter"></span>+</h3>
+                  <p>Bolestos vendidos</p>
+                </div>
+                <div class="stat-item">
+                  <h3><span data-purecounter-start="0" data-purecounter-end="47" data-purecounter-duration="1"
+                      class="purecounter"></span>%</h3>
+                  <p>Disponibles</p>
+                </div>
+              </div>
+              <div class="hero-btns">
+                <a href="#pago" class="btn btn-primary w-100">Comprar boletos</a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /Hero Section -->
+    <!-- Pestaña Lateral de Precio -->
+    <div class="price-sidebar" id="priceSidebar">
+      <h4 style="color: #fff;">Precio del Boleto</h4>
+      <p>2 x 120 Bs</p>
+      <button onclick="alert('Compra tu boleto!')">Comprar Boleto</button>
+    </div>
+
+    <script>
+      // Mostrar la pestaña lateral al hacer scroll
+      window.onscroll = function () {
+        const sidebar = document.getElementById("priceSidebar");
+        if (document.documentElement.scrollTop > 100) {
+          sidebar.style.display = "block";
+        } else {
+          sidebar.style.display = "none";
+        }
+      };
+    </script>
+    <section id="pago" style="padding-top: 0px;">
+      <div class="col-9 mx-auto pago">
+        <form>
+
+          <!-- Sección 1: Selección de boletos -->
+          <div class="form-section">
+            <h3 class="section-title p-0">Selección de Boletos</h3>
+            <p class="section-subtitle">Selecciona la cantidad de boletos que deseas comprar:</p>
+
+            <div class="btn-group col-3">
+              <button type="button" class="btn btn-secondary btnb">+2</button>
+              <button type="button" class="btn btn-secondary btnb">+3+</button>
+              <button type="button" class="btn btn-secondary btnb">+4</button>
+              <button type="button" class="btn btn-secondary btnb">+5</button>
+              <button type="button" class="btn btn-secondary btnb">+6</button>
+            </div>
+
+            <div class="mt-3">
+              <p><strong>Cantidad seleccionada:</strong> <span id="boletosCantidad">2</span> boletos</p>
+
+              <div class="input-group mb-3">
+                <button class="btn btn-outline-secondary" type="button" id="restarBtn">
+                  <i class="bx bx-minus box-icon"></i>
+                </button>
+                <input type="text" class="form-control" id="cantidadInput" value="2" readonly>
+                <button class="btn btn-outline-secondary" type="button" id="sumarBtn">
+                  <i class="bx bx-plus box-icon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección 2: Información personal -->
+          <div class="form-section">
+            <h3 class="section-title p-0">Información Personal</h3>
+            <p class="section-subtitle">Por favor, ingresa tus datos personales:</p>
+
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre Completo</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Juan Pérez">
+            </div>
+            <div class="mb-3">
+              <label for="cedula" class="form-label">Cédula</label>
+              <input type="text" class="form-control" id="cedula" placeholder="V-12345678">
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Número de Teléfono</label>
+              <input type="tel" class="form-control" id="telefono" placeholder="0412-3456789">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com">
+            </div>
+            <div class="mb-3">
+              <label for="estado" class="form-label">Estado</label>
+              <select class="form-select" id="estado">
+                <option selected>Seleccionar Estado</option>
+                <option value="1">Distrito Capital</option>
+                <option value="2">Miranda</option>
+                <option value="3">Zulia</option>
+                <option value="4">Carabobo</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Sección 3: Método de pago -->
+          <div class="form-section">
+            <h3 class="section-title p-0">Método de Pago</h3>
+            <p class="section-subtitle">Selecciona el método de pago:</p>
+
+            <div class="mb-3">
+              <div class="d-flex align-items-center">
+                <i class="bx bx-credit-card box-icon me-2"></i>
+                <span>Realiza el pago a través de Pago Móvil</span>
+              </div>
+            </div>
+
+            <!-- Datos de Pago Móvil -->
+            <div class="mb-3">
+              <div class="d-flex align-items-center">
+                <!-- Icono de Banco -->
+                <img src="assets/img/LogoSolo.png" alt="Banco de Venezuela Logo"
+                  style="width: 25px; height: auto; margin-right: 10px;">
+                <span>Banco De Venezuela (0102)</span>
+                <!-- Botón para copiar el banco -->
+                <button type="button" class="btn btn-outline-secondary btn-sm ms-2" onclick="copyText('banco-text')">
+                  <i class="bx bx-copy"></i> Copiar
+                </button>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex align-items-center">
+                <i class="bx bx-id-card bx-sm me-2"></i>
+                <span id="cedula-text">123456789</span>
+                <!-- Botón para copiar la cédula -->
+                <button type="button" class="btn btn-outline-secondary btn-sm ms-2" onclick="copyText('cedula-text')">
+                  <i class="bx bx-copy"></i> Copiar
+                </button>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex align-items-center">
+                <i class="bx bx-phone bx-sm me-2"></i>
+                <span id="telefono-text">042212345678</span>
+                <!-- Botón para copiar el teléfono -->
+                <button type="button" class="btn btn-outline-secondary btn-sm ms-2" onclick="copyText('telefono-text')">
+                  <i class="bx bx-copy"></i> Copiar
+                </button>
+              </div>
+            </div>
+
+            <!-- Botón para copiar todos los datos -->
+            <div class="mb-3">
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="copyAllData()">
+                <i class="bx bx-copy"></i> Copiar Todos los Datos
+              </button>
+            </div>
+          </div>
+          <script>
+            // Función para copiar texto individual
+            function copyText(elementId) {
+              var copyText = document.getElementById(elementId).innerText;
+              navigator.clipboard.writeText(copyText).then(function () {
+                alert("Información copiada: " + copyText);
+              }, function (err) {
+                alert("Error al copiar: " + err);
+              });
+            }
+
+            // Función para copiar todos los datos del pago movil
+            function copyAllData() {
+              var banco = "Banco De Venezuela (0102)";
+              var cedula = "123456789";
+              var telefono = "042212345678";
+              var allData = `Banco: ${banco}\nCédula: ${cedula}\nTeléfono: ${telefono}`;
+
+              navigator.clipboard.writeText(allData).then(function () {
+                alert("Todos los datos del pago móvil han sido copiados.");
+              }, function (err) {
+                alert("Error al copiar todos los datos: " + err);
+              });
+            }
+          </script>
+          <!-- Sección 4: Resumen de la compra -->
+          <div class="form-section">
+            <h3 class="section-title p-0">Resumen de la Compra</h3>
+            <p class="section-subtitle">Detalles de tu compra:</p>
+
+            <div class="mb-3">
+              <p><strong>Cantidad de boletos:</strong> <span id="boletosResumen">2</span></p>
+              <p><strong>Precio por boleto:</strong> 120 Bs</p>
+              <p><strong>Total a pagar:</strong> 240 Bs</p>
+            </div>
+
+            <div class="mb-3">
+              <label for="referencia" class="form-label">Referencia de pago</label>
+              <input type="text" class="form-control" id="referencia" placeholder="Escribe la referencia del pago">
+            </div>
+          </div>
+
+          <!-- Sección 5: Comprobante de pago -->
+          <div class="form-section">
+            <h3 class="section-title" style="padding-bottom: 0px;">Comprobante de Pago</h3>
+            <div class="dropzone" id="dropzone"
+              style="width: 100%; height: 200px; overflow: hidden; position: relative;">
+              <div id="dropzone-content">
+                <i class="bx bx-cloud-upload bx-lg"></i>
+                <p>Haz clic para subir el comprobante</p>
+                <p>JPG, PNG, GIF, o HIEF (máx. 5MB)</p>
+              </div>
+              <input type="file" id="fileInput" accept="image/*">
+            </div>
+
+            <!-- Botón para eliminar la imagen fuera del área -->
+            <div id="deleteButtonContainer" class="delete-button-container" style="display: none;">
+              <button type="button" class="btn btn-danger" id="deleteImageButton">
+                <i class="bx bx-trash"></i> Eliminar Imagen
+              </button>
+            </div>
+          </div>
+
+          <script>
+            const dropzone = document.getElementById('dropzone');
+            const fileInput = document.getElementById('fileInput');
+            const dropzoneContent = document.getElementById('dropzone-content');
+            const deleteButtonContainer = document.getElementById('deleteButtonContainer');
+            const deleteImageButton = document.getElementById('deleteImageButton');
+
+            // Previsualizar imagen
+            function showImagePreview(file) {
+              const reader = new FileReader();
+              reader.onload = function (e) {
+                dropzone.innerHTML = `<img src="${e.target.result}" alt="Imagen cargada" class="dropzone-img" />`;
+                // Mostrar el botón de eliminar fuera del área
+                deleteButtonContainer.style.display = "block";
+              };
+              reader.readAsDataURL(file);
+            }
+
+            // Eliminar imagen
+            window.removeImage = function () {
+              // Solo restauramos el área de carga sin disparar el selector de archivos
+              dropzone.innerHTML = `
+      <div id="dropzone-content">
+        <i class='bx bx-cloud-upload bx-lg'></i>
+        <p>Haz clic para subir el comprobante</p>
+        <p>JPG, PNG, GIF, o HIEF (máx. 5MB)</p>
+      </div>
+    `;
+              // Ocultamos el botón de eliminar imagen
+              deleteButtonContainer.style.display = "none";
+            };
+
+            // Disparar el input de archivo al hacer clic en la zona de dropzone
+            dropzone.addEventListener("click", function () {
+              fileInput.click(); // Dispara la selección de archivo solo cuando el usuario haga clic
+            });
+
+            // Eventos de arrastrar y soltar
+            dropzone.addEventListener("dragover", (e) => {
+              e.preventDefault();
+              dropzone.classList.add("dragover");
+            });
+
+            dropzone.addEventListener("dragleave", () => {
+              dropzone.classList.remove("dragover");
+            });
+
+            dropzone.addEventListener("drop", (e) => {
+              e.preventDefault();
+              dropzone.classList.remove("dragover");
+              const file = e.dataTransfer.files[0];
+              if (file && file.type.startsWith("image/")) {
+                showImagePreview(file);
+              }
+            });
+
+            // Evento de selección de archivo
+            fileInput.addEventListener("change", function () {
+              const file = this.files[0];
+              if (file && file.type.startsWith("image/")) {
+                showImagePreview(file);
+              }
+            });
+
+            // Evento de eliminación de imagen al hacer clic en el botón de eliminar fuera del área
+            deleteImageButton.addEventListener("click", removeImage);
+          </script>
+
+          <!-- Botón Finalizar Compra -->
+          <div class="text-center">
+            <button type="submit" class="btn btn-custom">Finalizar Compra</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <!-- Sección Redes Sociales -->
+        <div class="col-lg-3 col-md-6">
+          <h4>Síguenos</h4>
+          <p>Conéctate con nosotros a través de nuestras redes sociales:</p>
+          <div class="social-links d-flex">
+            <a href="https://wa.me/1234567890" target="_blank" class="me-3"><i class="bx bxl-whatsapp"></i></a>
+            <a href="https://www.tiktok.com/@yourprofile" target="_blank" class="me-3"><i class="bx bxl-tiktok"></i></a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="me-3"><i
+                class="bx bxl-instagram"></i></a>
+            <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="bx bxl-facebook"></i></a>
+          </div>
+        </div>
+
+        <!-- Sección Soporte -->
+        <div class="col-lg-3 col-md-6">
+          <h4>Soporte</h4>
+          <p>¿Tienes alguna duda o problema? Contáctanos:</p>
+          <ul>
+            <li><i class="bx bx-phone"></i> Teléfono: +58422 456 7890</li>
+            <li><i class="bx bx-envelope"></i> Email: soporte@tusitio.com</li>
+          </ul>
+        </div>
+
+        <!-- Sección Legal -->
+        <div class="col-lg-3 col-md-6">
+          <h4>Legal</h4>
+          <p>Consulta nuestros términos y condiciones:</p>
+          <a href="/terminos-y-condiciones" class="btn btn-link text-white">Términos y Condiciones</a>
+        </div>
+
+        <!-- Sección de Empresas -->
+        <div class="col-lg-3 col-md-6">
+          <div class="d-flex">
+            <img src="assets/img/conalot.png" alt="Logo Empresa 1" class="img-fluid me-2" style="max-width: 100px;">
+            <img src="assets/img/tachira.png" alt="Logo Empresa 2" class="img-fluid me-2" style="max-width: 100px;">
+            <img src="assets/img/supergana.png" alt="Logo Empresa 3" class="img-fluid" style="max-width: 100px;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright y Créditos -->
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">KMRIFAS</strong> <span>Todos los derechos
+          reservados</span></p>
+    </div>
+  </footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <script>
+    // Función para sumar y restar la cantidad de boletos
+    const restarBtn = document.getElementById('restarBtn');
+    const sumarBtn = document.getElementById('sumarBtn');
+    const cantidadInput = document.getElementById('cantidadInput');
+    const boletosResumen = document.getElementById('boletosResumen');
+    const boletosCantidad = document.getElementById('boletosCantidad');
+
+    restarBtn.addEventListener('click', () => {
+      if (parseInt(cantidadInput.value) > 1) {
+        cantidadInput.value = parseInt(cantidadInput.value) - 1;
+        boletosResumen.textContent = cantidadInput.value;
+        boletosCantidad.textContent = cantidadInput.value;
+      }
+    });
+
+    sumarBtn.addEventListener('click', () => {
+      cantidadInput.value = parseInt(cantidadInput.value) + 1;
+      boletosResumen.textContent = cantidadInput.value;
+      boletosCantidad.textContent = cantidadInput.value;
+    });
+  </script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
